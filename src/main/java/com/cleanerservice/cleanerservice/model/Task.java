@@ -2,6 +2,8 @@ package com.cleanerservice.cleanerservice.model;
 
 import jakarta.persistence.*;
 import java.util.Date;
+import java.util.List;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -36,4 +38,8 @@ public class Task {
     @UpdateTimestamp
     @Column(name = "updated_at")
     private Date updatedAt;
+
+    public static List<Task> listAllTasks() {
+        return null;
+    }
 }
