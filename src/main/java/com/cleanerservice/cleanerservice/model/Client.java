@@ -7,33 +7,30 @@ import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import java.time.LocalDateTime;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import java.time.LocalDateTime;
-import java.util.Date;
+
 
 @Entity
-@Table(name = "tasks")
+@Table(name = "client")
 @Setter
 @Getter
 @ToString
-public class Task {
-
+public class Client extends Task{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long id;
+    private Long client_id;
 
     @Column(nullable = false)
-    private String title;
+    private String name;
 
     @Column(nullable = false)
-    private String description;
-
-    @Column(nullable = false)
-    private LocalDateTime deadLine;
+    private String cpf;
 
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
@@ -43,7 +40,12 @@ public class Task {
     @Column(name = "updated_at")
     private  LocalDateTime updatedAt;
 
-    @OneToOne(mappedBy = "Client")
-    private Client client;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinTable(name = "emp_workstation",
+            joinColumns =
+                    { @JoinColumn(name = "client_id", referencedColumnName = "client_id") },
+            inverseJoinColumns =
+                    { @JoinColumn(name = "client_id", referencedColumnName = "client_id") })
+    private Task task;
 
 }

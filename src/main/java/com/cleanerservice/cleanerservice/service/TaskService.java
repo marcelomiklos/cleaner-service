@@ -2,6 +2,7 @@ package com.cleanerservice.cleanerservice.service;
 
 import com.cleanerservice.cleanerservice.model.Task;
 import com.cleanerservice.cleanerservice.repository.TaskRepository;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,11 +14,11 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 
 public class TaskService {
 
-    @Autowired
+
     private TaskRepository taskRepository;
 
     public Task createTask(Task task){
