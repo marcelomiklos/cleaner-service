@@ -16,7 +16,9 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
-@Table(name = "tasks")
+@Table(name = "tasks", indexes = {
+        @Index(name = "idx_task_id", columnList = "id")
+})
 @Setter
 @Getter
 @ToString
@@ -43,7 +45,7 @@ public class Task {
     @Column(name = "updated_at")
     private  LocalDateTime updatedAt;
 
-    @OneToOne(mappedBy = "Client")
-    private Client client;
+   // @OneToOne(mappedBy = "Client")
+   // private Client client;
 
 }
