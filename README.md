@@ -5,6 +5,8 @@
 
 Este projeto tem como base desenvolvimento de atividades na ementa do primeiro ciclo da pós-graduação FIAP, com o objetivo de ensinar os conceitos fundamentais do Spring Boot e suas funcionalidades. O projeto aborda vários aspectos importantes do desenvolvimento de aplicativos Java, incluindo a criação de uma API REST, integração com banco de dados usando Spring Data JPA, validação de entrada de dados com Spring Validation, testes unitários e de integração.
 
+I![Projeto entregue na plataforma](projeto-tech-chalenge/tech-chanlenge-01-template-preenchido.docx)
+
 ![Fluxo de teste](https://github.com/marcelomiklos/cleaner-service/blob/dev/fluxos-de-tests/fluxo-teste-0.png)
 
 ## Visão Geral
@@ -83,3 +85,9 @@ Abaixo foram disponibilizados todos os fluxos de testes mapeados:
 ![Fluxo de teste](https://github.com/marcelomiklos/cleaner-service/blob/dev/fluxos-de-tests/fluxo-teste-07.png)
 ![Fluxo de teste](https://github.com/marcelomiklos/cleaner-service/blob/dev/fluxos-de-tests/fluxo-teste-08.png)
 ![Fluxo de teste](https://github.com/marcelomiklos/cleaner-service/blob/dev/fluxos-de-tests/fluxo-teste-09.png)
+
+## Membros
+
+O projeto foi elaborado apenas por:
+
+Marcelo Miklos da Silva Nogueira - RGM: rm355484
